@@ -4,20 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fragancias CHB</title>
-  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Fragancias CHB</h1>
+  <header class="site-header">
+    <div class="brand">
+      <svg class="brand-icon" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="10" y="6" width="44" height="20" rx="3"></rect>
+        <rect x="22" y="26" width="20" height="22" rx="3"></rect>
+        <rect x="20" y="48" width="24" height="8" rx="2"></rect>
+      </svg>
+      <div class="brand-text">
+        <h1>FRAGANCIAS CHB</h1>
+        <span class="subtitle">Catálogo</span>
+      </div>
+    </div>
     <div class="controls">
-      <input id="search" type="search" placeholder="Buscar (marca, perfume, tamaño, tipo)" />
-      <select id="brandFilter"><option value="">Todas las marcas</option></select>
-      <select id="typeFilter">
+      <input id="search" class="input" type="search" placeholder="Buscar (marca, perfume, tamaño, tipo)" />
+      <select id="brandFilter" class="input"><option value="">Todas las marcas</option></select>
+      <select id="typeFilter" class="input">
         <option value="">Todos los tipos</option>
         <option value="EDT">EDT</option><option value="EDP">EDP</option><option value="EDC">EDC</option><option value="PARFUM">PARFUM</option>
       </select>
-      <select id="sortBy">
+      <select id="sortBy" class="input">
         <option value="brand">Orden: Marca</option>
         <option value="perfume">Orden: Perfume</option>
         <option value="priceAsc">Precio (↑)</option>
@@ -27,27 +39,29 @@
   </header>
 
   <main>
-    <aside id="index"></aside>
-    <section>
-      <div id="count"></div>
-      <table id="table">
-        <thead>
-          <tr>
-            <th>Marca</th><th>Perfume</th><th>Tamaño</th><th>Tipo</th><th>Precio</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-      <div id="pager">
-        <button id="prev">Anterior</button>
-        <span id="pageInfo"></span>
-        <button id="next">Siguiente</button>
+    <aside id="index" class="side-index" aria-label="Índice de marcas"></aside>
+    <section class="catalog">
+      <div id="count" class="count"></div>
+      <div class="table-wrap">
+        <table id="table" class="table">
+          <thead>
+            <tr>
+              <th>Marca</th><th>Perfume</th><th>Tamaño</th><th>Tipo</th><th>Precio</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div id="pager" class="pager">
+        <button id="prev" class="btn ghost">Anterior</button>
+        <span id="pageInfo" class="page-info"></span>
+        <button id="next" class="btn ghost">Siguiente</button>
       </div>
     </section>
   </main>
 
-  <footer>
-    <small>Fragancias CHB – Catálogo para GitHub Pages</small>
+  <footer class="site-footer">
+    <small>© Fragancias CHB — Presentación minimalista</small>
   </footer>
 
   <script src="script.js"></script>
