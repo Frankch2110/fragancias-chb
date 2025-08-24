@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fragancias CHB</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.svg" />
+</head>
+<body>
+  <header>
+    <h1>Fragancias CHB</h1>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Buscar (marca, perfume, tamaño, tipo)" />
+      <select id="brandFilter"><option value="">Todas las marcas</option></select>
+      <select id="typeFilter">
+        <option value="">Todos los tipos</option>
+        <option value="EDT">EDT</option><option value="EDP">EDP</option><option value="EDC">EDC</option><option value="PARFUM">PARFUM</option>
+      </select>
+      <select id="sortBy">
+        <option value="brand">Orden: Marca</option>
+        <option value="perfume">Orden: Perfume</option>
+        <option value="priceAsc">Precio (↑)</option>
+        <option value="priceDesc">Precio (↓)</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <aside id="index"></aside>
+    <section>
+      <div id="count"></div>
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Marca</th><th>Perfume</th><th>Tamaño</th><th>Tipo</th><th>Precio</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="pager">
+        <button id="prev">Anterior</button>
+        <span id="pageInfo"></span>
+        <button id="next">Siguiente</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Fragancias CHB – Catálogo para GitHub Pages</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
