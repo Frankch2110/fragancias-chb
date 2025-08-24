@@ -96,3 +96,14 @@ main{display:grid; grid-template-columns:240px 1fr; gap:18px; padding:18px}
 
 /* Footer */
 .site-footer{padding:18px; border-top:1px solid var(--line); color:var(--muted); text-align:center}
+/* Promo Bar */
+.promo-bar {
+  background:#111;
+  color:#fff;
+  text-align:center;
+  font-size:14px;
+  letter-spacing:0.5px;
+  padding:6px 10px;
+  font-family:Inter, Arial, sans-serif;
+}
+
